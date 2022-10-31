@@ -1,0 +1,155 @@
+/* .wallet{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+.wallet .header-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7vh;
+}
+.wallet a{
+    text-decoration: none;
+}
+.error-alert{
+    font-size: 19px;
+    font-weight: 600;
+    color: rgb(223, 106, 106);
+}
+.error-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2vh;
+}
+.forms-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin-left: 5vh;
+    margin-right: 5vh;
+    border-radius: 10px;
+} 
+
+.form-ctrl{
+    width: 100%;
+    padding: 2vh; 
+    font-size: 20px;
+    outline: none;
+    border-radius: 10px;
+}
+.text-area{
+    height: 220%;
+}
+.wrapper{
+    margin-left: 10vh;
+    margin-right: 10vh;
+} 
+.items{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 2vh;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(11, 11, 29);
+    padding: 10vh;
+    width: 100%;
+    border-radius: 10px;
+} 
+.active-btn{
+    color: rgb(55, 168, 202);
+}
+.item-btn{
+    padding: 1.2vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    /* color: black; */
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+.item-btn:nth-child(n+2){
+    margin-left: 2vh;
+}
+.message{
+    font-size: 22px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.788);
+    margin: 3vh;
+}
+.proceed-btn{
+    background-color: rgba(25, 92, 179, 0.753);
+    color: white;
+    padding: 2vh;
+    border: 0;
+    font-size: 19px;
+    padding-left: 4vh;
+    padding-right: 4vh;
+    border-radius: 10px;
+}
+/* .forms-wrapper{
+    display: flex;
+    flex-direction: column;
+
+} */
+
+@media(max-width: 540px){
+    .wallet{
+        width: auto;
+    }
+    .header-wrap p{
+        font-size: 13px;
+        font-weight: 500;
+        text-align: center;
+    }
+    .forms-wrapper .wrapper{
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .wrapper .items{
+        /* position: absolute; */
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .item-btn{
+        font-size: 12px;
+        white-space: nowrap;
+    }
+    .item-btn:nth-child(n+2) {
+        margin-left: 1vh;
+    }
+    .form-container{
+        width: auto;
+        padding: 3vh;
+    }
+    .form-ctrl{
+        width: auto;
+        font-size: 18px;
+    }
+    .message{
+        font-size: 13px;
+        text-align: center;
+    }
+    .error-alert{
+        font-size: 12px;
+        text-align: center;
+    }
+    #password{
+        width: 100%;
+    }
+    
+}

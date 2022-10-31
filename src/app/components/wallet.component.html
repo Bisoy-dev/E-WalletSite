@@ -1,0 +1,8 @@
+<a *ngIf="isDefault" [href]="wallet.url" target="_blank" [class]="style.anchor">
+    <img [src]="wallet.img" alt="" [class]="style.img">
+    <h4 [class]="style.h4">{{ wallet.name }}</h4>
+</a>
+<a *ngIf="!isDefault" [routerLink]="appUrl" [class]="style.anchor">
+    <img [src]="wallet.img" alt="" [class]="style.img">
+    <h4 [class]="style.h4">{{ wallet.name }}</h4>
+</a>

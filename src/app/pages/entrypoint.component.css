@@ -1,0 +1,159 @@
+.parag{
+    white-space: normal;
+    text-align: center;
+    font-size: 19px;
+    margin-bottom: 8vh;
+}
+.h1{
+    text-align: center;
+    margin-bottom: 4vh;
+    font-size: 35px;
+}
+.gs-btn{
+    padding: 10px;
+    width: 19vh;
+    border: 3px solid rgb(103, 210, 243);
+    border-radius: 7px;
+    font-size: 19px;
+    font-weight: 500;
+    color: rgba(74, 90, 90, 0.966);
+}
+.gs-btn:hover{
+    color: rgb(55, 168, 202);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 3px solid rgb(145, 214, 235);
+}
+.step-parag{
+    font-size: 20px;
+}
+.button-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-container{
+    padding: 5vh;
+}
+.drk-blue-bg{
+    background-color: rgb(11, 11, 29);
+}
+.second-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10vh;
+    
+}
+.step-number{
+    color: rgba(58, 58, 241, 0.767);
+}
+.steps{
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.863);
+    width: 100%;
+    margin-top: 5vh;
+    padding: 10vh;
+    border-radius: 10px;
+}
+
+.supp-wallets{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10vh;
+}
+
+.step{
+    margin: 3vh;
+}
+.white-color{
+    color: white;
+}
+
+.wallets-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+} 
+.connect-wallet-btn{
+    background-color: rgb(11, 11, 29);
+    padding: 1rem;
+    color: white;
+    border: 5px solid white;
+    width: 15%;
+    font-weight: 600;
+}
+.connect-wallet-btn:hover{
+    border: 5px solid rgb(103, 210, 243);
+}
+
+@media (max-width: 540px) {
+    .gs-btn{
+        font-size: 18px;
+        white-space: nowrap;
+    }
+    .content-container img{
+        width: 300px;
+        height: auto;
+    }
+    .supp-wallets{
+        width: auto;
+    }
+    .supp-wallets .wallets-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0;
+    }
+    .h1{
+        font-size: 20px;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+    .parag {
+        /* white-space: nowrap; */
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 5vh;
+    }
+    .second-section {
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; */
+        /* justify-content: center; */
+        padding: 5vh;
+        margin: 0%;
+    }
+    .steps {
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.863);
+        width: auto;
+        margin-top: 3vh;
+        padding: 5vh;
+        border-radius: 10px;
+    }
+    .step h1{
+        font-size: 19px;
+        font-weight: 600;
+    }
+    .step-parag{
+        font-size: 13px;
+    }
+    .white-color{
+        font-size: 23px;
+        text-align: center;
+    }
+    .connect-wallet-btn {
+        text-align: center;
+        background-color: rgb(11, 11, 29);
+        padding: 1vh;
+        color: white;
+        border: 3px solid white;
+        width: 50%;
+        font-weight: 600;
+        white-space: nowrap;
+        font-size: 13px;
+        /* position: absolute; */
+    }
+}

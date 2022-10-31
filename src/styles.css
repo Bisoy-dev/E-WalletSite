@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.content{
+    padding: 0;
+    margin: 0;
+}
+.first-layer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8vh;
+}
+.title {
+    font-size: 55px;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 540px) {
+    body{
+        width: auto;
+        margin: 0;
+        /* margin-right: 0; */
+        /* position: absolute; */
+    }
+    .text-muted{
+        font-size: 12px;
+        white-space: nowrap;
+    }
+    .title{
+        font-size: 30px;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+    .first-layer {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        margin-top: 3vh;
+    }
+}

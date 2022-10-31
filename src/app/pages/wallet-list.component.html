@@ -1,0 +1,7 @@
+<div class="wallets">
+    <h1 class="title mt-5">Connect A Wallet</h1>
+    <p>Select a wallet to continue</p> 
+    <div class="wallets-wrap">
+        <wallet *ngFor="let wallet of wallets; let i = index;" [isDefault]="false" [appUrl]="['/wallet', i]" [wallet]="wallet" [style]="{ anchor : 'a-wallet-2', img : 'wallet-img-2', h4: 'wallet-name-2' }"></wallet>
+    </div>
+</div>
